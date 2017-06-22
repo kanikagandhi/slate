@@ -15,9 +15,12 @@ To install docker and make the docker image of slate follow these steps:
 	
 	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 \
      		--recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+		
 	sudo sh -c "echo deb https://get.docker.com/ubuntu docker main \
            	> /etc/apt/sources.list.d/docker.list"
+		
 	sudo apt-get update
+	
 	sudo apt-get install docker docker-engine 
   
 4. mkdir /var/slate.
@@ -74,6 +77,11 @@ You're going to need:
  - **Bundler** — If Ruby is already installed, but the `bundle` command doesn't work, just run `gem install bundler` in a terminal.
 
 ### Getting Set Up
+(This repository has files for building a docker image if you don't want the docker image then remove these three files:
+ 
+ .dockerignore
+ Dockerfile
+ docker-compose.yml)
 
 1. Fork this repository on Github.
 2. Clone *your forked repository* (not our original one) to your hard drive with `git clone https://github.com/YOURUSERNAME/slate.git`
