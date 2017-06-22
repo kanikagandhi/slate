@@ -1,3 +1,33 @@
+To install docker and make the docker image of slate follow these steps:
+
+1. Older versions of Docker were called docker or docker-engine. If these are installed, uninstall them: 
+	sudo apt-get remove docker docker-engine
+  
+2. Docker needs to use the aufs storage drivers:
+	sudo apt-get update
+	sudo apt-get install \
+    	  linux-image-extra-$(uname -r) \
+    	  linux-image-extra-virtual
+        
+3. Install the latest stable Docker:
+	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 \
+     		--recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+	sudo sh -c "echo deb https://get.docker.com/ubuntu docker main \
+           	> /etc/apt/sources.list.d/docker.list"
+	sudo apt-get update
+	sudo apt-get install docker docker-engine 
+  
+4. mkdir /var/slate.
+
+5. Fork repository on Github.
+
+6. Clone your forked repository to your hard drive with git clone https://github.com/YOURUSERNAME/slate.git /var/slate
+
+7. cd /var/slate
+
+8. Then do docker-compose up -d --build
+
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/lord/img/master/logo-slate.png" alt="Slate: API Documentation Generator" width="226">
   <br>
