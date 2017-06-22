@@ -1,0 +1,6 @@
+slate_app:
+  build: .
+  ports:
+    - "4567:4567"
+  volumes:
+    - ./source:/usr/src/slate_app/source
