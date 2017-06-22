@@ -80,7 +80,9 @@ You're going to need:
 (This repository has files for building a docker image if you don't want the docker image then remove these three files:
  
  .dockerignore
+ 
  Dockerfile
+ 
  docker-compose.yml)
 
 1. Fork this repository on Github.
